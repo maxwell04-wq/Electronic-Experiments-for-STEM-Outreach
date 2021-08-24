@@ -1,0 +1,62 @@
+%Title
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{comment}
+% This command changes the font style where SLU promotes Arial
+\newenvironment{myfont}{\fontfamily{phv}\selectfont}{\par}
+
+% Image and float settings
+\usepackage{graphicx}
+\usepackage[font={small}]{caption}
+\usepackage{subcaption}
+\graphicspath{{./Figures/}}
+\newsavebox{\largestimage}
+\usepackage{float}
+%Glossary
+%\usepackage[toc, acronym, nonumberlist]{glossaries}
+% Page formatting
+\usepackage[margin=1in]{geometry}
+\usepackage{emptypage}
+% Color package
+\usepackage{xcolor}
+\colorlet{shadecolor}{gray!20}
+% Codes
+\usepackage{listings}
+\lstset{columns=fullflexible}
+% Formatting of list items
+\usepackage{enumitem}
+% Dummy text
+\usepackage{lipsum}
+\usepackage{afterpage}
+% Clickable links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+% Remove indentation in paragraphs
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1}
+% Remove dots in TOC
+\usepackage{tocloft}
+\renewcommand{\cftdot}{}
+\usepackage{parskip}
+% Multiple rows and columns
+\usepackage{multicol}
+\usepackage{multirow}
+% Urdu
+\usepackage{polyglossia} 
+\usepackage{fontspec} 
+\setmainlanguage{english}
+\setotherlanguage{urdu}
+\newfontfamily\urdufont{Jameel Noori Nastaleeq} [Extension = .ttf,]
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+%Arduino listings file
+\include{Arduino/arduinoLanguage}

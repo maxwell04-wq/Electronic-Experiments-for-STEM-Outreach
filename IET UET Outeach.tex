@@ -1,0 +1,67 @@
+\documentclass[11pt, twoside]{book}
+
+\input{preamble.tex}
+
+\begin{document}
+\pagestyle{empty}
+\include{title-ii}
+\cleardoublepage
+
+%-----------------------------------------------------------------------
+%-----------------------------------------------------------------------
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\tableofcontents
+%\include{Extras/Abbreviations/abbreviations}
+\include{Extras/acknowledgement}
+\include{Extras/Preface/preface}
+
+%-----------------------------------------------------------------------
+%-----------------------------------------------------------------------
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\fancyhead[L]{\leftmark}
+\newpage
+\part{ACADEMIC EXPERIMENTS}
+\include{Arduino/light-and-color/Light-and-Color}
+\include{Arduino/electricity/Electricity}
+\include{Arduino/Magnetism/magnetism}
+\include{Arduino/Heat/heat}
+\include{Arduino/forces/Forces}
+\include{Arduino/speed/Speed}
+\include{Arduino/Rotation/rotation}
+\include{Arduino/astronomy/Astronomy}
+%-----------------------------------------------------------------------
+\part{RECREATIONAL EXPERIMENTS}
+\thispagestyle{empty}
+%\hspace{0pt}
+%\vfill
+%{\begin{center}
+%\Large
+%\textit{The following experiments have not been designed for strictly academic purposes.}
+%\end{center}
+%}
+%\vfill
+
+\include{Arduino-ii/bluetooth-car}
+\include{Arduino-ii/door-with-ir}
+\include{Arduino-ii/led-patterns}
+\include{Arduino-ii/led-voice-control}
+\include{Arduino-ii/led-with-ldr}
+\include{Arduino-ii/light-following-car}
+\include{Arduino-ii/traffic-signal}
+\pagestyle{empty}
+\afterpage{\null\newpage}
+%-----------------------------------------------------------------------
+%\part{Wet Experiments}
+%\include{Wet-Experiments/Filtration/filtration}
+%\include{Wet-Experiments/Chemical-Reactions/reactions}
+%\include{Wet-Experiments/Mixtures/mixtures}
+%-----------------------------------------------------------------------
+%\part{Computational Thinking}
+
+%-----------------------------------------------------------------------
+%\printglossary[type=acronym,style=long]
+\end{document}
